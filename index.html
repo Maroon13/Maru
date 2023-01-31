@@ -15,31 +15,39 @@
         
         ::-webkit-scrollbar-thumb:vertical {
             height:10px;
-            background-color: #725fb0; 
+            background-color: rgba(114,95,176,1);
+            border: 2px solid rgba(0,0,0,0.25);
             transition: background-color 1.5s;
+            border-radius: 30px;
         }
            
         ::-webkit-scrollbar-thumb:horizontal {
             height:30px;
-            background-color: #725fb0; 
+            background-color: #725fb0;
+            border: 2px solid rgba(0,0,0,0.25);
             transition: background-color 1.5s;
+            border-radius: 30px;
         }
         
         ::-webkit-scrollbar-thumb:horizontal:hover{
             background-color: #c078ff;
-            transition: background-color 1.5s;
+            border: 2px solid rgba(0,0,0,0.25);
+            
         }
         
         ::-webkit-scrollbar-thumb:vertical:hover{
-            background-color: #c078ff;
-            transition: background-color 1.5s;
+            background-color: rgba(192,120,256,1);
+            border: 2px solid rgba(0,0,0,0.25);
+            
         }
             
            
         ::-webkit-scrollbar {
             height: 10px;
             width: 12px;
-            background-color: transparent; }
+            background-color: #45394a;
+            transition: background-color 1.5s;
+        }
         
         
             body{
@@ -57,6 +65,7 @@
             border-left: 3px solid #6435b6;
             
             }
+            
 
             .topbar{
                 position:absolute;
@@ -106,13 +115,23 @@
                 justify-content: space-between;
                 padding-left:10%;
                 padding-right: 10%;
+                padding-bottom:3px;
+                font-family: 'M PLUS 1 Code', sans-serif;
+                font-size:19px;
             }
             #links a{
-                color: cyan;
+                color: #ff83eb;
+                transition: color 0.3s;
+                transition: letter-spacing 0.3s;
+                letter-spacing:0.1ch;
+            }
+            #links a:hover{
+                color: #fdaaff;
+                letter-spacing:0.4ch;
             }
 
             #coloredline1{
-                background-color: cyan;
+                background-color: #de3efe;
                 height:3px;
                 margin-top:3px;
                 padding-bottom:3px;
@@ -284,7 +303,50 @@
                 justify-content:center
             }
             
+            .titlebio img{
+                margin: 30px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                width: 64px;
+            }
+            
+            #star img{
+                animation: rotation 6s infinite linear;
+            }
+            
+            #star-reverse img{
+                animation: rotation reverse 6s infinite linear;
+            }
+            
             /*animation keyframess*/
+
+            @keyframes rotation {
+              from {
+                transform: rotate(0deg);
+                
+                
+                
+              }
+            
+              to {
+                transform: rotate(359deg);
+                
+              }
+            }
+            
+            @keyframes rotation reverse {
+              from {
+                transform: rotate(359deg);
+                
+                
+                
+              }
+            
+              to {
+                transform: rotate(0deg);
+                
+              }
+            }
             
             @keyframes slidein {
               from {
@@ -314,6 +376,162 @@
                 animation-timing-function: ease-in;
                 
               }
+              
+              
+              /*
+              ACCORDIONS CLASSES AND IDs
+              */
+              
+            
+                          
+              
+            }
+            
+            .accordion {
+                max-width: 100%;
+                height:200px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                outline-color: #ffffff;
+                outline-width: 1px;
+                border-radius: 0px 12px 12px 0px;
+                outline-style: solid;
+                background-color: #2d2d2d;
+                padding-top:50px;  
+            }
+            
+            .accordion__label,
+            .accordion__content {  
+                margin-top:10px;
+                padding-bottom:25px;
+                padding-right: 1px;
+                height:50px;
+            }
+            #backdrop{
+                width:100%;
+                height:100%;
+            }
+            
+            .accordion__label {
+                display: block;
+                color: #ffffff;
+                font-weight: 500;
+                cursor: pointer;
+                position: relative;
+                transition: all 0.2s;
+                font-size: 24px;
+                text-align:center;
+                font-family: 'M PLUS 1 Code', sans-serif;
+                font-size:18px;
+                text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+                z-index:4;
+                letter-spacing:0ch;
+                background-image:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df99o8f-6873c7fd-8336-438e-9e9c-f008b5726601.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5OW84Zi02ODczYzdmZC04MzM2LTQzOGUtOWU5Yy1mMDA4YjU3MjY2MDEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qNhtBPosmXikkPOSYXwSdTaSPWMyosPsd1UqKwD0epY");
+                background-position: 50% 85%;
+                background-size: 100% 500%;
+                
+            }
+            
+            #backdrop{
+                padding-top:30px;
+                backdrop-filter: blur(4px) brightness(65%) grayscale(50%);
+                transition: backdrop-filter 0.2s;
+            }
+            #backdrop:hover{
+                backdrop-filter: blur(1px) brightness(100%) grayscale(0%);
+            }
+            
+            
+            .accordion__label:hover {
+                letter-spacing:0.3ch;
+                font-size: 21px;
+            }
+            
+            .accordion__label::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: rotate(0deg);
+                transition: transform 0.2s;
+                right: 20px;
+                width: 12px;
+                height: 6px;
+                background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+                background-size: contain;
+            }
+            
+            .accordion__content {
+                overflow:hidden;
+                background-color: transparent;
+                line-height: 1.6;
+                font-size: 18px;
+                padding: 0px;
+                max-height:0px;
+                height:100%;
+            }
+            
+            .accordion__content p {
+                padding:10px;
+                padding-bottom:0px;
+                padding-top:3px;
+                margin:0px;
+            }
+            
+            .accordion__content a{
+                margin-top:0px;
+                padding-top:0px;
+                padding-bottom:5px;
+                display:flex;
+                justify-content: center;
+                text-align:center;
+                border-bottom: 2px solid cyan;
+                letter-spacing:0ch;
+                transition: letter-spacing 0.3s;
+                font-family: 'Press Start 2P', cursive;
+                font-size:10px;
+                text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+            }
+            .accordion__content a:hover{
+                letter-spacing:0.3ch;
+            }
+            
+            .accordion__input {
+                display: none;
+            }
+            .accordion__input:checked ~ .accordion__content {
+                max-height: 8200px;
+                animation-name: test;
+                animation-duration: 0.2s;
+            }
+            .accordion__input:not(:checked) ~ .accordion__content {
+                max-height: 0px;
+                animation-name: test1;
+                animation-duration: 0.5s;
+            }
+            
+            /*
+            
+            @keyframes test{
+                from{
+                    max-height: 0px;
+                }
+                to{
+                    max-height: 8200px
+                }
+            }
+            
+            @keyframes test1{
+                from{
+                    max-height: 8200px
+                }
+                to{
+                    max-height: 0px;
+                }
+            }
+            
+            */
+            
+            .accordion__input:checked ~ .accordion__label::after {
+                transform: rotate(180deg);
             }
 
         </style>
@@ -341,7 +559,7 @@
                 <a href="https://www.tumblr.com/ask">Ask</a>
                 <a href="rules">Rules</a>
                 <a href="navigation">Navigation</a>
-                <a href="muse">Muses page</a>
+                <a href="muses">Muses page</a>
             </div>            
         
             <div id="coloredline1">
@@ -382,7 +600,15 @@
         
             <div class="titlebio">
                 
+                <div id="star">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df9ebo0-c24b3df6-b277-4367-af6a-86efa75db055.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5ZWJvMC1jMjRiM2RmNi1iMjc3LTQzNjctYWY2YS04NmVmYTc1ZGIwNTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gkV6_-2Rmx5DouF7dTMcYC5vMsOYVJCV27X4VtjwN2M"/>
+                </div>
+                
                 <b>Angelic Buster's BIO</b>
+                
+                <div id="star-reverse">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df9ebo0-c24b3df6-b277-4367-af6a-86efa75db055.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5ZWJvMC1jMjRiM2RmNi1iMjc3LTQzNjctYWY2YS04NmVmYTc1ZGIwNTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gkV6_-2Rmx5DouF7dTMcYC5vMsOYVJCV27X4VtjwN2M"/>
+                </div>
                 
             </div>
             <br/><br/>
@@ -435,16 +661,117 @@ Thus, the superhero known as Angelic Buster was born, a hero who’s goal is to 
             
             <b><u>Powers</u>:</b> <br/>
             <blockquote>
-                Normally she doesn’t have any powers as Tear, but being contracted by the ancient dragon Eskalade, Tear can transform into her suoerhero persona Angelic Buster.
+                Normally she doesn’t have any powers as Tear, but being contracted by the ancient dragon Eskalade, Tear can transform into her superhero persona Angelic Buster.
 
 As the Angelic Buster, she uses her voice and her right gauntlet known as the soul shooter to shoot magic projectiles at her opponent, among being able to do other things, such as creating magic constructs and weapons, such as a gigantic hammer, star blades
             </blockquote>
             <br/>
             
             <b><u>Verses</u>:</b> <br/>
-            <blockquote>
-                <b>W.I.P</b>
-            </blockquote>
+            
+                
+                
+                <div class="accordion_location">
+                    <!--Each div = 1 accordion-->
+                    <div>
+                        <input type="checkbox" name="verses_accordion" id="verse0" class="accordion__input">
+                        <label for="verse0" title="lawain" class="accordion__label">
+                            <div id="backdrop">
+                                <b><i>Main verse</i></b>
+                            </div>
+                        </label>
+                        <div class="accordion__content">
+                            <blockquote>
+                                <p>
+                                Read the backstory for more info
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    
+                    
+                    <div>
+                        <input type="checkbox" name="verses_accordion" id="verse1" class="accordion__input">
+                        <label for="verse1" title="lawain" class="accordion__label">
+                            <div id="backdrop">
+                                <b><i>Verse 2</i></b>
+                            </div>
+                        </label>
+                        <div class="accordion__content">
+                            <blockquote>
+                                <p>
+                                <b>W.I.P</b>
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" name="verses_accordion" id="verse2" class="accordion__input">
+                        <label for="verse2" title="lawain" class="accordion__label">
+                            <div id="backdrop">
+                                <b><i>Verse 3</i></b>
+                            </div>
+                        </label>
+                        <div class="accordion__content">
+                            <blockquote>
+                                <p>
+                                <b>W.I.P</b>
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" name="verses_accordion" id="verse3" class="accordion__input">
+                        <label for="verse3" title="lawain" class="accordion__label">
+                            <div id="backdrop">
+                                <b><i>Hello new me! | Corrupt verse </i></b>
+                            </div>
+                        </label>
+                        <div class="accordion__content">
+                            <blockquote>
+                                <p>
+                                Tear has lived her life as a cursed child for years, shunned by her peers, with only a few exceptions like Kyle and Velderoth accepting her and become her friend. While her friends were one reason why she didn't give up living, god does the desire to end it or start a double life stay ever so high and it did not diminish.
+<br/><br/>
+The story follows mostly how it usually goes, with the real change starting at the infirmary, where Tear just flat out accepted the contract without any hesitation, not thinking about the potential side effects of being contracted to become a magical girl.<br/>
+She was genuinely enjoying the magical girl life and even enjoying the new found fame using her new found singing voice to become an idol like Eskalade wanted. However, what will happen to her in the coming months, years even will forever change her life.
+<br/><br/>
+With each time she's using the relic to become Angelic Buster, the relic started to affect her normal self, causing her to gradually become more like her Angelic Buster persona, both in terms of appearance and in terms of personality irreversibly to increase how effective she is with the relic.
+<br/><br/>
+The moment her friends started to notice the changes, with concern of her wellbeing in mind, they asked if she feels different from what she used to be.
+<br/><br/>
+"Me? Being...Different then before? I look like this all the time, right so what’s the issue?"
+<br/><br/>
+The worst thing started to happen to her. What she remembers from her past self slowly has started to dwindle from her mind as well, like such thoughts never were there to begin with, or so it appears. She kept using her new found powers, unknowingly losing more and more what made her the Tear they once knew. The two started to be more distant from her the more her normal form started to resemble Angelic Buster.
+<br/><br/>
+A year or two passed once more, the girl Tear, who they were friends with had only a few things left of her past self. Memories of how she looked like before she even became Angelic Buster? Gone. How she got her powers that made her become Angelic Buster? changed to make her think she had such power from the very begining. All that she had of her past were only memories of her friends and her name as her only memories of when she was Tear. Though by then the two boys didn't talk to her ever again.
+<br/><br/>
+Day by day, Tear was wondering once where they both are, in a way concerned about her bonds she has-- or had with them, but she couldn't find them. With her not being able to find them anymore, she was in a way alone, with the only company being Eskalade, the one who has contracted her in the first place. So once she realized that she can't find them anymore one thought came to mind.
+<br/><br/>
+
+"They're...Not interested in seeing me again, are they..?" <br/><br/>
+Looking at her soul shooter, she started to get massive headaches from trying to think what has caused them to leave her. However, all memories except of her knowing that they're her friends are all but either gone or foggy, leaving her with headaches every time she's trying to consciously remember them.
+<br/><br/>
+If it was Tear, she would be very sad to even wanting to never do anything with her angelic buster persona and try and find ways to fix this issue. However, the person who's looking at her soul shooter no longer was the same Tear that they knew and care so much for. This person was Tear - The Angelic Buster and she was annoyed that they left her. With her being annoyed that they've left her, she's was thinking.
+
+<br/><br/>
+"...If they want to forget about me, then fine-- I'll forget about them too! Esky, let's leave that memory behind us and forget about them! Just forget every moment I have with them!! Hell, if they miss Tear so much, I’ll forget my own name too!!!"
+<br/><br/>
+
+She aimed her soul shooter to the sky, using every memory of them as fuel for this one big star bubble. Once it was shot in the air and burst like fireworks above the clouds, a sigh escaped from her, before the new Tear-- no, the new person who called herself Angelic Buster started to smile as those memories were removed from her entirely.
+
+<br/><br/>
+"It is done.. Welcome, new me!"
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+            
             
             </div>
         </div>
