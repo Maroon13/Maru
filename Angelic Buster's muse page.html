@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@1&family=M+PLUS+1+Code:wght@100;200;300;400;500;600&family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+
+
+        <style>
+        
+        
+        ::-webkit-scrollbar-thumb:vertical {
+            height:10px;
+            background-color: #725fb0; 
+            transition: background-color 1.5s;
+        }
+           
+        ::-webkit-scrollbar-thumb:horizontal {
+            height:30px;
+            background-color: #725fb0; 
+            transition: background-color 1.5s;
+        }
+        
+        ::-webkit-scrollbar-thumb:horizontal:hover{
+            background-color: #c078ff;
+            transition: background-color 1.5s;
+        }
+        
+        ::-webkit-scrollbar-thumb:vertical:hover{
+            background-color: #c078ff;
+            transition: background-color 1.5s;
+        }
+            
+           
+        ::-webkit-scrollbar {
+            height: 10px;
+            width: 12px;
+            background-color: transparent; }
+        
+        
+            body{
+                font-family: 'Roboto', sans-serif;
+                padding: 0;
+                margin: 0px;
+                width:100%;
+                max-width:100%;
+                
+            }
+            
+            blockquote{
+            margin: 6px 00px 00px;
+            padding-left: 9px;
+            border-left: 3px solid #6435b6;
+            
+            }
+
+            .topbar{
+                position:absolute;
+                background-color: #2d2d2d;
+                padding-top: 5px;
+                color: #ffffff;
+                text-align: center;
+                letter-spacing:2px;
+                line-height:100%;
+                width:100%;
+            }
+            
+            .topbar h1{
+                font-family: 'Merriweather', sans-serif;
+            }
+            
+            .topbar img{
+                margin-top: 2px;
+                width: 64px;
+                padding-right: 4px;
+            }
+            
+            #topbartitle{
+                display: flex;
+                justify-content:center
+            }
+            
+            #title{
+                padding-top:0px;
+                margin-top:0px;
+            }
+            
+            #name{
+                font-size:24px;
+                margin: 5px;
+                margin-top:0px;
+                padding-top:0px;
+            }
+            
+            #title{
+                margin:5px;
+                margin-bottom: 15px;
+            }
+            
+            #links{
+                display: flex;
+                justify-content: space-between;
+                padding-left:10%;
+                padding-right: 10%;
+            }
+            #links a{
+                color: cyan;
+            }
+
+            #coloredline1{
+                background-color: cyan;
+                height:3px;
+                margin-top:3px;
+                padding-bottom:3px;
+            }
+
+            .content{
+                padding-top:0px;
+                width:100%;
+                margin:0px;
+                position:center;
+            }
+
+            .info{
+                max-width:100%;
+                margin:0px;
+                margin-left:17%;
+                margin-right:17%;
+                padding:25px;
+                line-height:28px;
+                background-color: #f6f7fb;
+                font-size: 20px;
+            }
+            .info b{
+                font-family: 'M PLUS 1 Code', sans-serif;
+                text-transform: uppercase;
+                font-weight:900;
+                font-size: 24px;
+            }
+            .info u{
+                font-family: 'M PLUS 1 Code', sans-serif;
+                text-decoration: none;
+                border-bottom: 4px solid #6435b6;
+                font-size:30px;
+                font-weight:700;
+                padding: 1px;
+                margin-bottom:5px;
+            }
+            
+            .charback{
+                margin-top:auto;
+                background-position: 50% -5%;
+                background-repeat: no-repeat;
+                background-size: 120%;
+                background-image:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df99o8f-6873c7fd-8336-438e-9e9c-f008b5726601.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5OW84Zi02ODczYzdmZC04MzM2LTQzOGUtOWU5Yy1mMDA4YjU3MjY2MDEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qNhtBPosmXikkPOSYXwSdTaSPWMyosPsd1UqKwD0epY");
+                filter: blur(7px) brightness(85%);
+                -webkit-filter: blur(7px) brightness(85%);
+                width:100%;
+                margin-left: auto;
+                margin-right: auto;
+                height:2000px;
+                position:fixed;
+                z-index: -2;
+
+            }
+            .charsample{
+                padding:5px;
+                padding-top:185px;
+                position:center;
+                max-width:140%;
+                height:700px;
+                max-height:600px;
+                padding-bottom:100px;
+                z-index: -1;
+                display:grid;
+                grid-template-columns: 2fr 3fr;
+                overflow:hidden;
+            }
+            
+            .char-title{
+                color:white;
+                font-size:28px;
+                padding-left:15px;
+                padding-top: 0px;
+                margin-top: 0px;
+                -webkit-text-stroke: 2px #6435b6;
+                font-weight: 900;
+                animation-duration: 2s;
+                animation-name: opacity;
+            }
+            .char-title blockquote{
+                text-align: center;
+                padding:10px;
+                font-size:24px;
+                margin-left:5px;
+                margin-bottom:1px;
+                padding-left:5px;
+                padding-bottom:0px;
+                -webkit-text-stroke: 2px #6435b6;
+                border-left: 0px solid #6435b6;
+                display:grid;
+                grid-template-columns: 1fr 15fr 1fr;
+            }
+        
+            .char-title blockquote:before{
+                margin:0px;
+                padding-top: 70%;
+                content: "\201C";
+                padding-right: 0px;
+                font-size: 54px;
+            }
+            
+            .char-title blockquote:after{
+                padding-left: 5px;
+                padding-top: 70%;
+                content: "\201D";
+                font-size:54px;
+                padding-bottom: 0px;
+                margin-bottom:0px;
+            }
+            
+            #quote{
+                padding: 5px;
+                padding-top: 0px;
+                padding-bottom: 15px;
+                padding-left: 15px;
+                margin: 0px;
+                margin-left: 10px;
+                margin-top: 10%;
+                background-color:rgba(32, 32, 32, 0.514);
+            }
+            
+            #quote h1{
+                padding:0px;
+                padding-top:7px;
+                margin:0px;
+                padding-left:40px;
+                -webkit-text-stroke: 1.8px #6435b6;
+                font-size: 26px;
+            }
+            
+            .char-title img{
+                margin-top:20px;
+                width:90%;
+                padding-left:10%;
+                margin-bottom:5px;
+            }
+            
+            .char-image img{
+                -webkit-filter: drop-shadow(12px 12px 7px rgba(148,255,255,0.43));
+                padding:auto;
+                margin:auto;
+                width:90%;
+                padding-left:10%;
+                padding-top:5%;
+                animation-duration: 2s;
+                animation-name: slidein;
+                
+            }
+            
+            .backgroundcontent{
+                z-index: 10;
+                margin-top:0px;
+                padding-top:10px;
+                background-color:#2d2929;
+            }
+            
+            .titlebio{
+                -webkit-filter: drop-shadow(0.4px 1px 13px rgba(124,142,191,1));
+                -webkit-text-stroke: 2px #cb70ff;
+                text-transform: uppercase;
+                font-family: 'Merriweather', serif;
+                font-weight:400;
+                font-size:50px;
+                margin:auto;
+                padding:auto;
+                margin-top: 20px;
+                color:white;
+                display:flex;
+                justify-content:center
+            }
+            
+            /*animation keyframess*/
+            
+            @keyframes slidein {
+              from {
+                margin-left: 20%;
+                opacity: 0%;
+                
+                
+              }
+            
+              to {
+                opacity: 100%;
+                margin-left: 0%;
+                
+                
+              }
+            }
+            
+            @keyframes opacity {
+              from {
+                opacity: 0%;
+                animation-timing-function: ease-in;
+                
+              }
+            
+              to {
+                opacity: 100%;
+                animation-timing-function: ease-in;
+                
+              }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="topbar">
+
+                
+                
+                <div id="topbartitle">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df9chpy-debf4789-4e1d-49ed-8fa0-4d92c9d09096.png/v1/fill/w_894,h_894,strp/d35p31p_9cbcc4e9_f53e_45a7_ab9d_d05205bccb50_by_solar13_df9chpy-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5Y2hweS1kZWJmNDc4OS00ZTFkLTQ5ZWQtOGZhMC00ZDkyYzlkMDkwOTYucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.4meU3y9wNOvAzkdD3SB5xBne4LVq9NTioto8C3Wy5vQ"/>
+                
+                <h1><i>{name}</i></h1> 
+                </div>
+
+            
+            
+                <div id="title"><i>{Title}</i></div>
+            
+            <div id="links">
+                <a href="https://maple-alliance.tumblr.com/">Home</a>
+                <a href="https://www.tumblr.com/ask">Ask</a>
+                <a href="rules">Rules</a>
+                <a href="navigation">Navigation</a>
+                <a href="muse">Muses page</a>
+            </div>            
+        
+            <div id="coloredline1">
+            </div>
+            
+        </div>
+
+
+        <div class="charback">
+            
+        </div>
+        
+        <div class="charsample">
+            
+                    <div class="char-title">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df99p94-30343d86-d148-4d49-aefd-fff21ec99bf4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5OXA5NC0zMDM0M2Q4Ni1kMTQ4LTRkNDktYWVmZC1mZmYyMWVjOTliZjQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2UH0I-jyBJNUukUdJey93by3ldvovA2kzXbaSty7FdE"/><br/>
+            
+                <div id = "quote">
+                    
+                    <blockquote>
+                    <i>I.. Am Angelic Buster! Champion of the little people– and                     some big ones!</i>
+                    </blockquote>
+                    
+                    <h1>~<i>Tear, the Angelic Buster</i></h1>
+                </div>
+                
+            </div>
+            
+            <div class="char-image">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df99o5t-85e59813-f030-46a1-bbe9-0d2186d5c563.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5OW81dC04NWU1OTgxMy1mMDMwLTQ2YTEtYmJlOS0wZDIxODZkNWM1NjMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.LhxgZhNZHikDUPw9PEPV64gppko7xInQAYrExI0jCDQ"/>
+            </div>
+            
+        </div>
+        
+        <div class="backgroundcontent">
+        
+        <div class="content">
+        
+            <div class="titlebio">
+                
+                <b>Angelic Buster's BIO</b>
+                
+            </div>
+            <br/><br/>
+        
+        <div class="info" >
+        
+        
+            <b>Name:</b> Tear<br/>
+            
+            <b>Surname:</b> Unknown<br/>
+            
+            <b>Age:</b> 16-ish<br/>
+            
+            <b>Birthday:</b> August 1st<br/>
+            
+            <b>Gender:</b> Female<br/>
+            
+            <b>Race:</b> Nova<br/>
+            
+            <b>place of origin</b> Pantheon/Helliseum, Grandis<br/><br/>
+            
+            <b>occupation:</b> Idol, pirate<br/>
+            
+            <b>Affiliation:</b> unknown<br/>
+            
+            <b>Reputation:</b> Angelic Buster - Idol of the battlefield and hero of justice<br/><br/>
+            
+            <b><u>summary</u>:</b> <br/>
+            <blockquote>
+            The hero of justice and the idol of the battlefield, Angelic Buster uses the power she gained from the making the contract with the ancient dragon Eskalade to fight for what’s right.
+            </blockquote>
+            <br/><br/>
+            
+            <b><u>Backstory</u>:</b> <br/>
+            
+            <blockquote>
+                
+                
+                Tear, born without any tail or magic, She started off as an average powerless person who had lived a goot chunk of her life in Pantheon - the only place that wasn’t fully taken by the tyran Magus, having to endure disappointment from her peers and in some cases worse, with only a few of her friends actually being kind to her: Velderoth and Kyle. These three together were the self proclaimed Helliseum force, who dreamed to retake the homeland of Helliseum from the Magus’s rule.<br/><br/>
+
+Her life stayed mostly the same until one fateful day where her life changed when one of the priests under Magus’ rule attempted to rob an ancient relic that resided in the east of Pantheon. The priest’ attempt failed as Tear tried to stop them from taking the relic away, causing her to accidentally touch the relic. The next thing she realized she already defeated the priest while she was rocking a different appearance all together, from different haircolor with added twintails, to a different outfit and a different eye color all together.<br/><br/>
+
+In the infirmary she later was informed that the relic was permanently stuck to her right arm as a gauntlet. Attempts to take it off were made, until the voice of an ancient being was heard, an ancient dragon that resided in the relic known as Eskalade, who wished to sign a contract in return to give her the power of the relic. Reluctantly Tear agrees to it.<br/><br/>
+
+Thus, the superhero known as Angelic Buster was born, a hero who’s goal is to defeat Magus and liberate Helliseum from his tyrannical rule.
+                
+                
+            </blockquote>
+            <br/>
+            
+            <b><u>Powers</u>:</b> <br/>
+            <blockquote>
+                Normally she doesn’t have any powers as Tear, but being contracted by the ancient dragon Eskalade, Tear can transform into her suoerhero persona Angelic Buster.
+
+As the Angelic Buster, she uses her voice and her right gauntlet known as the soul shooter to shoot magic projectiles at her opponent, among being able to do other things, such as creating magic constructs and weapons, such as a gigantic hammer, star blades
+            </blockquote>
+            <br/>
+            
+            <b><u>Verses</u>:</b> <br/>
+            <blockquote>
+                <b>W.I.P</b>
+            </blockquote>
+            
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
