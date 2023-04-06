@@ -1,451 +1,221 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <title>{Title}</title>
-        <link rel="shortcut icon" href="{Favicon}" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@1&family=M+PLUS+1+Code:wght@100;200;300;400;500;600&family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
-
-
+            <link rel="shortcut icon" href="{Favicon}" />
+            
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@1,600&family=Roboto:ital,wght@0,100;1,900&display=swap" rel="stylesheet">
         <style>
-        
-        
-        ::-webkit-scrollbar-thumb:vertical {
-            height:10px;
-            background-color: rgba(114,95,176,1);
-            border: 2px solid rgba(0,0,0,0.25);
-            transition: background-color 1.5s;
-            border-radius: 30px;
-        }
+           /* HEADER*/
            
-        ::-webkit-scrollbar-thumb:horizontal {
-            height:30px;
-            background-color: #725fb0;
-            border: 2px solid rgba(0,0,0,0.25);
-            transition: background-color 1.5s;
-            border-radius: 30px;
-        }
-        
-        ::-webkit-scrollbar-thumb:horizontal:hover{
-            background-color: #c078ff;
-            border: 2px solid rgba(0,0,0,0.25);
+            ::-webkit-scrollbar-thumb:vertical {
+                height:10px;
+                background-color: #1993cc; 
+                transition: background-color 1.5s;
+                border-radius: 15px;
+            }
             
-        }
-        
-        ::-webkit-scrollbar-thumb:vertical:hover{
-            background-color: rgba(192,120,256,1);
-            border: 2px solid rgba(0,0,0,0.25);
+            ::-webkit-scrollbar-thumb:horizontal {
+                height:30px;
+                background-color: #1993cc; 
+                transition: background-color 1.5s;
+                border-radius: 15px;
+            }
             
-        }
+            ::-webkit-scrollbar-thumb:horizontal:hover{
+                background-color:#00d5ff;
+                transition: background-color 1.5s;
+            }
             
+            ::-webkit-scrollbar-thumb:vertical:hover{
+                background-color: #00d5ff;
+                transition: background-color 1.5s;
+            }
+                
+            
+            ::-webkit-scrollbar {
+                height: 100%;
+                width: 12px;
+                background-color: #2d2d2d; 
+            }
            
-        ::-webkit-scrollbar {
-            height: 10px;
-            width: 12px;
-            background-color: #45394a;
-            transition: background-color 1.5s;
-        }
-        
-        
+            html {
+                scroll-behavior: smooth;
+            }
+           
             body{
                 font-family: 'Roboto', sans-serif;
-                padding: 0;
                 margin: 0px;
+                padding: 0;
+                background-color: #1993cc;
+            }
+            
+            b{
+                font-family: 'exo', sans-serif;
+                -webkit-filter: drop-shadow(0px 0px 2px rgba(0,0,0,1));
+            }
+
+            img{
+                pointer-events: none;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+            }
+
+
+            .header{
+                background-color: #2d2d2d;
+                display: grid;
+                grid-template-columns: 1fr;
+                padding: 15px;
+                margin-bottom:0px;
+                justify-content: space-between;
+                color: #ffffff;
+                border-bottom: 3px solid #1a9ef7;
+                top: 0;
+                left: 0;
+                z-index:10;
+                position:fixed;
                 width:100%;
-                max-width:100%;
+            }
+
+            .header h1{
+                margin-top:0px;
+                padding: 7px;
+                display: flex;
+                justify-content: center;
+                font-size:44px;
+                height:10px;
+                -webkit-text-stroke: 2.0px #0f9bb9;
+                -webkit-filter: drop-shadow(0px 0px 1px #9cedff);
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+
+            #link_header{
+                display: flex;
+                justify-content: space-evenly;
+                min-width:50%;
+                max-width:75%;
+                margin-left:20%;
+                margin-right:20%;
+            }
+
+            #link_header a {
+                font-size:28px;
+                color: #ffffff;
+                transition: color 0.2s;
+                -webkit-text-stroke: 1px #0f9bb9;
+                font-weight: 900;
+                -webkit-filter: drop-shadow(0px 0px 1.5px #9cedff);
+                letter-spacing: 0.1ch;
+            }
+
+            #link_header a:hover {
+                color: #8beaff;
+            }
+
+            #title_char{
+                text-align: center;
+                font-size:58px;
+                height:120px;
+                color: #ffffff;
+                margin: 0px;
+                padding:0px;
+                -webkit-text-stroke: 2px #0f9bb9;
+                -webkit-filter: drop-shadow(0px 0px 1px rgba(0,0,0,1));
                 
             }
-            
-            blockquote{
-            margin: 6px 00px 00px;
-            padding-left: 9px;
-            border-left: 3px solid #6435b6;
-            
-            }
-            
 
-            .topbar{
-                position:absolute;
-                background-color: #2d2d2d;
-                padding-top: 5px;
-                color: #ffffff;
-                text-align: center;
-                letter-spacing:2px;
-                line-height:100%;
-                width:100%;
-            }
-            
-            .topbar h1{
-                font-family: 'Merriweather', sans-serif;
-            }
-            
-            .topbar img{
-                margin-top: 2px;
-                width: 64px;
-                padding-right: 4px;
-            }
-            
-            #topbartitle{
-                display: flex;
-                justify-content:center
-            }
-            
-            #title{
-                padding-top:0px;
-                margin-top:0px;
-            }
-            
-            #name{
-                font-size:24px;
-                margin: 5px;
-                margin-top:0px;
-                padding-top:0px;
-            }
-            
-            #title{
-                margin:5px;
-                margin-bottom: 15px;
-            }
-            
-            #links{
-                display: flex;
-                justify-content: space-between;
-                padding-left:10%;
-                padding-right: 10%;
-                padding-bottom:3px;
-                font-family: 'M PLUS 1 Code', sans-serif;
-                font-size:19px;
-            }
-            #links a{
-                color: #ff83eb;
-                transition: color 0.3s;
-                transition: letter-spacing 0.3s;
-                letter-spacing:0.1ch;
-            }
-            #links a:hover{
-                color: #fdaaff;
-                letter-spacing:0.4ch;
+            .summary blockquote{
+                margin: 10px 0px;
             }
 
-            #coloredline1{
-                background-color: #de3efe;
-                height:3px;
-                margin-top:3px;
-                padding-bottom:3px;
-            }
+            /*CONTENT*/
 
             .content{
+                grid-template-columns: 1fr;
+                margin: auto;
+                line-height: 145%;
+                width: 65%;
+                margin-top:0px;
+                padding: 8px 32px;
                 padding-top:0px;
-                width:100%;
-                margin:0px;
-                position:center;
+                align: center;
+                font-size:26px;
+                color: #ffffff;
+                font-weight:550;
             }
 
-            .info{
-                max-width:100%;
-                margin:0px;
-                margin-left:17%;
-                margin-right:17%;
-                padding:25px;
-                line-height:28px;
-                background-color: #f6f7fb;
-                font-size: 20px;
+            .content #info{
+                background-color: rgb(32, 32, 32);
             }
-            .info b{
-                font-family: 'M PLUS 1 Code', sans-serif;
-                text-transform: uppercase;
-                font-weight:900;
-                font-size: 24px;
-            }
-            .info u{
-                font-family: 'M PLUS 1 Code', sans-serif;
-                text-decoration: none;
-                border-bottom: 4px solid #6435b6;
-                font-size:30px;
+
+            .content b {
+                font-size:26px;
                 font-weight:700;
-                padding: 1px;
-                margin-bottom:5px;
+                
             }
-            
-            .charback{
-                margin-top:auto;
-                background-position: 50% -5%;
-                background-repeat: no-repeat;
-                background-size: 120%;
-                background-image:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df99o8f-6873c7fd-8336-438e-9e9c-f008b5726601.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5OW84Zi02ODczYzdmZC04MzM2LTQzOGUtOWU5Yy1mMDA4YjU3MjY2MDEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qNhtBPosmXikkPOSYXwSdTaSPWMyosPsd1UqKwD0epY");
-                filter: blur(7px) brightness(85%);
-                -webkit-filter: blur(7px) brightness(85%);
-                width:100%;
+
+            .content img{
+                display: block;
                 margin-left: auto;
                 margin-right: auto;
-                height:2000px;
-                position:fixed;
-                z-index: -2;
+                width: 55%;
+                
+            }
+            #accordion_title {
+            padding-bottom:6px;
+            font-weight:900;
+            }
 
+            #accordion_title b{
+                font-size:27px;
+                font-weight:900;
             }
-            .charsample{
-                padding:5px;
-                padding-top:185px;
-                position:center;
-                max-width:140%;
-                height:700px;
-                max-height:600px;
-                padding-bottom:100px;
-                z-index: -1;
-                display:grid;
-                grid-template-columns: 2fr 3fr;
-                overflow:hidden;
-            }
-            
-            .char-title{
-                color:white;
-                font-size:28px;
-                padding-left:15px;
-                padding-top: 0px;
-                margin-top: 0px;
-                -webkit-text-stroke: 2px #6435b6;
-                font-weight: 900;
-                animation-duration: 2s;
-                animation-name: opacity;
-            }
-            .char-title blockquote{
-                text-align: center;
-                padding:10px;
-                font-size:24px;
-                margin-left:5px;
-                margin-bottom:1px;
-                padding-left:5px;
-                padding-bottom:0px;
-                -webkit-text-stroke: 2px #6435b6;
-                border-left: 0px solid #6435b6;
-                display:grid;
-                grid-template-columns: 1fr 15fr 1fr;
-            }
-        
-            .char-title blockquote:before{
-                margin:0px;
-                padding-top: 70%;
-                content: "\201C";
-                padding-right: 0px;
-                font-size: 54px;
-            }
-            
-            .char-title blockquote:after{
-                padding-left: 5px;
-                padding-top: 70%;
-                content: "\201D";
-                font-size:54px;
-                padding-bottom: 0px;
-                margin-bottom:0px;
-            }
-            
-            #quote{
-                padding: 5px;
-                padding-top: 0px;
-                padding-bottom: 15px;
-                padding-left: 15px;
-                margin: 0px;
-                margin-left: 10px;
-                margin-top: 10%;
-                background-color:rgba(32, 32, 32, 0.514);
-            }
-            
-            #quote h1{
-                padding:0px;
-                padding-top:7px;
-                margin:0px;
-                padding-left:40px;
-                -webkit-text-stroke: 1.8px #6435b6;
-                font-size: 26px;
-            }
-            
-            .char-title img{
-                margin-top:20px;
-                width:90%;
-                padding-left:10%;
-                margin-bottom:5px;
-            }
-            
-            .char-image img{
-                -webkit-filter: drop-shadow(12px 12px 7px rgba(148,255,255,0.43));
-                padding:auto;
-                margin:auto;
-                width:90%;
-                padding-left:10%;
-                padding-top:5%;
-                animation-duration: 2s;
-                animation-name: slidein;
-                
-            }
-            
-            .backgroundcontent{
-                z-index: 10;
-                margin-top:0px;
-                padding-top:10px;
-                background-color:#2d2929;
-            }
-            
-            .titlebio{
-                -webkit-filter: drop-shadow(0.4px 1px 13px rgba(124,142,191,1));
-                -webkit-text-stroke: 2px #cb70ff;
-                text-transform: uppercase;
-                font-family: 'Merriweather', serif;
-                font-weight:400;
-                font-size:50px;
-                margin:auto;
-                padding:auto;
-                margin-top: 20px;
-                color:white;
-                display:flex;
-                justify-content:center
-            }
-            
-            .titlebio img{
-                margin: 30px;
-                margin-top: 0px;
-                margin-bottom: 0px;
-                width: 64px;
-            }
-            
-            #star img{
-                animation: rotation 6s infinite linear;
-            }
-            
-            #star-reverse img{
-                animation: rotation reverse 6s infinite linear;
-            }
-            
-            /*animation keyframess*/
 
-            @keyframes rotation {
-              from {
-                transform: rotate(0deg);
-                
-                
-                
-              }
-            
-              to {
-                transform: rotate(359deg);
-                
-              }
-            }
-            
-            @keyframes rotation reverse {
-              from {
-                transform: rotate(359deg);
-                
-                
-                
-              }
-            
-              to {
-                transform: rotate(0deg);
-                
-              }
-            }
-            
-            @keyframes slidein {
-              from {
-                margin-left: 20%;
-                opacity: 0%;
-                
-                
-              }
-            
-              to {
-                opacity: 100%;
-                margin-left: 0%;
-                
-                
-              }
-            }
-            
-            @keyframes opacity {
-              from {
-                opacity: 0%;
-                animation-timing-function: ease-in;
-                
-              }
-            
-              to {
-                opacity: 100%;
-                animation-timing-function: ease-in;
-                
-              }
-              
-              
-              /*
-              ACCORDIONS CLASSES AND IDs
-              */
-              
-            
-                          
-              
-            }
-            
+            /* ACCORDIONS */
+
             .accordion {
                 max-width: 100%;
-                height:200px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
                 outline-color: #ffffff;
                 outline-width: 1px;
                 border-radius: 0px 12px 12px 0px;
                 outline-style: solid;
+                overflow: hidden;
                 background-color: #2d2d2d;
-                padding-top:50px;  
             }
-            
+
             .accordion__label,
-            .accordion__content {  
-                margin-top:10px;
-                padding-bottom:25px;
+            .accordion__content {
+                padding: 5px 8px;
                 padding-right: 1px;
-                height:50px;
             }
-            #backdrop{
-                width:100%;
-                height:100%;
-            }
-            
+
             .accordion__label {
+                -webkit-text-stroke: 0.5px #0f9bb9;
                 display: block;
                 color: #ffffff;
                 font-weight: 500;
                 cursor: pointer;
                 position: relative;
-                transition: all 0.2s;
+                transition: background 0.2s;
                 font-size: 24px;
-                text-align:center;
-                font-family: 'M PLUS 1 Code', sans-serif;
-                font-size:18px;
-                text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-                z-index:4;
-                letter-spacing:0ch;
-                background-image:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df99o8f-6873c7fd-8336-438e-9e9c-f008b5726601.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5OW84Zi02ODczYzdmZC04MzM2LTQzOGUtOWU5Yy1mMDA4YjU3MjY2MDEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qNhtBPosmXikkPOSYXwSdTaSPWMyosPsd1UqKwD0epY");
-                background-position: 50% 85%;
-                background-size: 100% 500%;
-                
             }
-            
-            #backdrop{
-                padding-top:30px;
-                backdrop-filter: blur(4px) brightness(65%) grayscale(50%);
-                transition: backdrop-filter 0.2s;
+
+            .accordion__label{
+                padding: 10px 40px;
             }
-            #backdrop:hover{
-                backdrop-filter: blur(1px) brightness(100%) grayscale(0%);
-            }
-            
-            
+
             .accordion__label:hover {
-                letter-spacing:0.3ch;
-                font-size: 21px;
+                background: #5bcbff;;
             }
-            
+
             .accordion__label::after {
                 content: "";
                 position: absolute;
@@ -458,325 +228,986 @@
                 background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
                 background-size: contain;
             }
-            
+
             .accordion__content {
-                overflow:hidden;
-                background-color: transparent;
+                padding: 5px 8px;
                 line-height: 1.6;
-                font-size: 18px;
-                padding: 0px;
-                max-height:0px;
-                height:100%;
+                font-size: 22px;
+                display: none;
             }
-            
-            .accordion__content p {
-                padding:10px;
-                padding-bottom:0px;
-                padding-top:3px;
-                margin:0px;
-            }
-            
-            .accordion__content a{
-                margin-top:0px;
-                padding-top:0px;
-                padding-bottom:5px;
-                display:flex;
-                justify-content: center;
-                text-align:center;
-                border-bottom: 2px solid cyan;
-                letter-spacing:0ch;
-                transition: letter-spacing 0.3s;
-                font-family: 'Press Start 2P', cursive;
-                font-size:10px;
-                text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-            }
-            .accordion__content a:hover{
-                letter-spacing:0.3ch;
-            }
-            
             .accordion__input {
                 display: none;
             }
             .accordion__input:checked ~ .accordion__content {
-                max-height: 8200px;
-                animation-name: test;
-                animation-duration: 0.2s;
+                display: block;
+                border-top: 3px solid #1993cc;
+                border-bottom: 3px solid rgb(32, 32, 32);
             }
-            .accordion__input:not(:checked) ~ .accordion__content {
-                max-height: 0px;
-                animation-name: test1;
-                animation-duration: 0.5s;
-            }
-            
-            /*
-            
-            @keyframes test{
-                from{
-                    max-height: 0px;
-                }
-                to{
-                    max-height: 8200px
-                }
-            }
-            
-            @keyframes test1{
-                from{
-                    max-height: 8200px
-                }
-                to{
-                    max-height: 0px;
-                }
-            }
-            
-            */
-            
+
             .accordion__input:checked ~ .accordion__label::after {
                 transform: rotate(180deg);
             }
 
-        </style>
+            /*BLOCKQUOTE*/
 
+            blockquote {
+            margin: 3px 0px 00px;
+            border-left: 3px solid #1993cc;
+            margin-left:7px;
+            padding-left:13px;
+            padding-right:7px;
+            border-radius:15px;
+            }
+
+            #line_split{
+                width:100%;
+                height:3px;
+                margin: 24px 0px;
+                background-color: #1993cc;
+            }
+
+            /*RELATIONSHIPS*/
+            .relation{
+                width: 95%;
+                display: flex;
+                justify-content: space-evenly;
+                height: 64px;
+                overflow: hidden;
+                margin-top: 2%;
+                margin-bottom: 2%;
+                margin-left: 7px;
+                padding: 4px;
+                border-radius: 33.5px;
+                outline-color: #ffffff;
+                outline-width: 1.5px;
+                outline-style: solid;
+                color: #ffffff;
+            }
+
+            .relation_pixie{
+                width: 95%;
+                display: flex;
+                justify-content: space-evenly;
+                overflow: hidden;
+                margin-top: 2%;
+                margin-bottom: 2%;
+                margin-left: 7px;
+                padding: 4px;
+                border-radius: 33.5px;
+                outline-color: #ffffff;
+                outline-width: 1.5px;
+                outline-style: solid;
+                color: #ffffff;
+            }
+
+            #relationinfo{
+                width:95%;
+                padding-left:1%;
+                padding-right:2%;
+                font-size: 16px;
+            }
+
+            .relation a{
+                transform: rotate(0deg);
+                transition: transform 0.5s;
+            }
+            
+            .relation a:hover{
+                transform: rotate(720deg);
+            }
+
+            #relationinfo a{
+                font-family: 'exo', sans-serif;
+                font-weight: bolder;
+                font-size: 14px;
+                font-weight: 900;
+                color:#1174b6;
+                transition: color 0.3s;
+            }
+
+            #relationinfo a:hover{
+                color:#1a9ef7;
+            }
+
+            #relationtop{
+                display: flex;
+                overflow: hidden;
+                justify-content: space-between;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .relation_pixie img{
+                height: 67px;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 100%;
+                outline-offset: 3px;
+                outline-color: #ffffff;
+                outline-width: 1.5px;
+                outline-style: solid;
+            }
+
+            .relation img{
+                height: 100%;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 100%;
+                outline-offset: 3px;
+                outline-color: #ffffff;
+                outline-width: 1.5px;
+                outline-style: solid;
+            }
+
+            #relationline{
+                width:105%;
+                height:2px;
+                background-color:#ffffff;
+                margin-top: 7px;
+                margin-bottom: 2px;
+            }
+
+            #info{
+                position: relative;
+                border-radius:0px 0px 15px 15px;
+                padding: 24px 32px 0px 32px;
+                border-left: 5px solid #1993cc;
+                border-right: 5px solid #1993cc;
+                border-bottom: 5px solid #1993cc;
+                font-size: 28px;
+                font-weight: bold;
+                line-height: 1.25;
+            }
+
+            #info b{
+                font-size: 35px;
+                font-weight: bolder;
+                letter-spacing: 0.05ch;
+                -webkit-text-stroke: 0.4px #0f9bb9;
+            }
+
+            .tab_content{
+                margin-top:141px;
+                position: relative;
+                margin-bottom:0px;
+                width:100%;
+                height:700px;
+                background-color: transparent;
+            }
+            #tab_background{
+                background-color: black;
+                z-index: 0;
+                position:fixed;
+                width:100%;
+                height:700px;
+                background-image:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/dfrez4k-f9751b48-30a7-428e-b820-37a9ac2d0550.png/v1/fill/w_1192,h_670,q_70,strp/scep1_add_academy_2_by_solar13_dfrez4k-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvZGM4MjU3YjYtZTg5ZC00ZTFmLWI1YzYtNDMwMTRmMzAzMjkzXC9kZnJlejRrLWY5NzUxYjQ4LTMwYTctNDI4ZS1iODIwLTM3YTlhYzJkMDU1MC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.79j8RxRFvQNX5y0ZlZ6zVJN-5uppBUcsW_dR8-ZB9DE");
+                background-position: center;
+                background-position-y: top;
+                background-size: 110%;
+                filter: blur(2.5px) brightness(85%);
+                -webkit-filter: blur(2.5px) brightness(85%);
+            }
+            #content_background{
+                -webkit-filter: drop-shadow(0px -5px 30px rgba(0,0,0,0.5));
+                position: relative;
+                border-top: 6px solid #1993cc;
+                background: rgb(255,255,255);
+                background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(244,241,248,1) 47%, rgba(230,229,238,1) 100%);
+                background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(244,241,248,1) 47%, rgba(230,229,238,1) 100%);
+                background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(244,241,248,1) 47%, rgba(230,229,238,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e6e5ee",GradientType=1);
+            }
+
+            #char_flexbox{
+                display:flex;
+                justify-content: space-around;
+                color:white;
+            }
+
+            #char_flexbox #title_char{
+                width:100%;
+                margin:0px;
+                margin-top:20px;
+                margin-left:2.5%;
+                height:80px;
+            }
+
+            #flexbox_info{
+                width:110%;
+                margin-left:8%;
+                font-size: 32px;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding:12px;
+                font-weight: 600;
+            }
+            #flexbox_info b{
+                font-size:36px;
+                -webkit-text-stroke: 1px #0f9bb9;
+                -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,1));
+            }
+            
+            #info #title_char b{
+                font-size: 48px;
+                -webkit-text-stroke: 1px #0f9bb9;
+                margin:0px;
+                padding:0px;
+            }
+
+            #flexbox_char_image{
+                overflow: show;
+                max-width: 600px;
+                width: 600px;
+            }
+            #flexbox_char_image img{
+                margin-left:10%;
+                width:600px;
+                position: relative;
+                animation-duration: 0.5s;
+                animation-name: slidein;
+                -webkit-filter: drop-shadow(0px 0px 14px rgba(0,0,0,0.5));
+            }
+
+            .flexbox_appearance_buttons{
+                border-top: 3px solid #1a9ef7;
+                padding-top:10px;
+                width:130%;
+                display:flex;
+                flex-wrap: wrap;
+                -webkit-text-stroke: 1px #0f9bb9;
+                color:white;
+                font-size: 38px;
+                -webkit-filter: drop-shadow(0px 0px 4px rgba(0,0,0,1));
+            }
+
+            .tab__input{
+                display: none;
+            }
+
+            .label_char{
+                display: block;
+            }
+
+
+            @keyframes slidein {
+              from {
+                margin-left: 20%;
+                opacity: 0%;
+                
+                
+              }
+            
+              to {
+                opacity: 100%;
+                margin-left:10%;
+                
+                
+              }
+            }
+
+            #tab_title{
+                font-size: 36px;
+            }
+
+            .flexbox_appearance_buttons input{
+                margin:15px;
+                margin-right:0px;
+            }
+
+            .tab__input ~ .label_char{
+                margin-left:10px;
+                background-color: aliceblue;
+                border: 3px solid #1a9ef7;
+                padding-left:0px;
+                padding-right:54px;
+                border-radius:32px;
+                transition:color 0.5s;
+            }
+            .tab__input ~ .label_char b u{
+                background-color: #2d2d2d;
+                border-radius:32px;
+                border: 4px solid #1a9ef7;
+                padding:24px;
+                padding-top:0px;
+                padding-bottom:0px;
+            }
+
+            .tab__input :not(:checked) ~ .label_char{
+                color:white;
+            }
+            .tab__input:checked ~ .label_char{
+                color:#9cedff;
+            }
+
+            .tab_char{
+                display:none;
+            }
+            .tab_char.active{
+                display:block;
+            }
+
+            .tabs{
+                margin-top:16.5%;
+                margin-left:5%;
+                -webkit-filter: drop-shadow(0px 0px 4px rgba(0,0,0,1));
+            }
+
+        </style>
     </head>
 
     <body>
+        <div class="header">
+            <h1><i><b>Lawain-dimensional-heroes</b></i></h1> <br/>
 
-        <div class="topbar">
-
-                
-                
-                <div id="topbartitle">
-                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df9chpy-debf4789-4e1d-49ed-8fa0-4d92c9d09096.png/v1/fill/w_894,h_894,strp/d35p31p_9cbcc4e9_f53e_45a7_ab9d_d05205bccb50_by_solar13_df9chpy-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5Y2hweS1kZWJmNDc4OS00ZTFkLTQ5ZWQtOGZhMC00ZDkyYzlkMDkwOTYucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.4meU3y9wNOvAzkdD3SB5xBne4LVq9NTioto8C3Wy5vQ"/>
-                
-                <h1><i>{name}</i></h1> 
-                </div>
-
-            
-            
-                <div id="title"><i>{Title}</i></div>
-            
-            <div id="links">
-                <a href="https://maple-alliance.tumblr.com/">Home</a>
-                <a href="https://www.tumblr.com/ask">Ask</a>
-                <a href="rules">Rules</a>
-                <a href="navigation">Navigation</a>
-                <a href="muses">Muses page</a>
-            </div>            
-        
-            <div id="coloredline1">
+            <div id="link_header">
+                <a href="https://lawain-dimensional-heroes.tumblr.com/"> <b>Home</b> </a>
+                    <a href="https://www.tumblr.com/dashboard"><b>Dashboard</b></a>
+                <a href="https://lawain-dimensional-heroes.tumblr.com/ask"><b>Ask</b></a>
+                <a href="https://lawain-dimensional-heroes.tumblr.com/submit"><b>Submit</b></a>
+                <a href="https://lawain-dimensional-heroes.tumblr.com/rules"><b>Rules</b></a>
+                <a href="https://lawain-dimensional-heroes.tumblr.com/about"><b>About</b></a>
+                <a href="https://lawain-dimensional-heroes.tumblr.com/muses"><b>muses</b></a>
             </div>
-            
         </div>
 
+            <!--Insert muse art here-->
+            <div id="tab_background"></div>
+            <div class="tab_content">
+                <div id="char_flexbox">
+                    <div>
+                        <div id="title_char">
+                            <b>Nanada Hanaka</b>
+                        </div>
 
-        <div class="charback">
-            
-        </div>
+                        <div id="flexbox_info">
+                            <b>First name:</b> Hanaka <br/>
+                            <b>Surname:</b> Nanada <br/>
+                            <b>Age:</b> 16 years <br/>
+                            <b>Birthday:</b> September 4th <br/>
+                            <b>Gender:</b> Female <br/>
+                            <b>Height:</b> 164cm <br/>
+                            <b>Race:</b> Half Human / Half Striker Dragon <br/>
+                        </div>
+
+                        <div class="tabs">
+                            <div id="tab_title">
+                                <b>Appearances:</b> <br/>
+                            </div>
+                            <div class="flexbox_appearance_buttons">
+                                <div>
+                                    <input type="radio" name="tabs" id="ap1" data-id="appearance_1" name="tab_appearance" class="tab__input" checked>
+                                        <label for="ap1" class="label_char"><b><u>Default</u></b></label>
+                                    </input>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="tabs" id="ap2" data-id="appearance_2" name="tab_appearance" class="tab__input">
+                                        <label for="ap2" class="label_char"><b><u>White Angel</u></b></label>
+                                    </input>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div id="flexbox_char_image">
+                            
+                            <img id="appearance_1" class="tab_char active" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df7zmki-6ce172d5-124f-47ab-b9d3-58f65c9ef77d.png/v1/fill/w_578,h_1382,strp/lineart_by_solar13_df7zmki-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Mjg0MCIsInBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY3em1raS02Y2UxNzJkNS0xMjRmLTQ3YWItYjlkMy01OGY2NWM5ZWY3N2QucG5nIiwid2lkdGgiOiI8PTExODgifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.gNUVHCyO8uSA9MEJskZ4_PyAyGgp2UrUMgQwl0Y-hPY"/>
+                            
+                            <img id="appearance_2" class="tab_char" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df7zmki-6ce172d5-124f-47ab-b9d3-58f65c9ef77d.png/v1/fill/w_578,h_1382,strp/lineart_by_solar13_df7zmki-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Mjg0MCIsInBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY3em1raS02Y2UxNzJkNS0xMjRmLTQ3YWItYjlkMy01OGY2NWM5ZWY3N2QucG5nIiwid2lkdGgiOiI8PTExODgifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.gNUVHCyO8uSA9MEJskZ4_PyAyGgp2UrUMgQwl0Y-hPY"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
         
-        <div class="charsample">
-            
-                    <div class="char-title">
-                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df99p94-30343d86-d148-4d49-aefd-fff21ec99bf4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5OXA5NC0zMDM0M2Q4Ni1kMTQ4LTRkNDktYWVmZC1mZmYyMWVjOTliZjQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2UH0I-jyBJNUukUdJey93by3ldvovA2kzXbaSty7FdE"/><br/>
-            
-                <div id = "quote">
-                    
-                    <blockquote>
-                    <i>I.. Am Angelic Buster! Champion of the little people– and                     some big ones!</i>
-                    </blockquote>
-                    
-                    <h1>~<i>Tear, the Angelic Buster</i></h1>
+        <div id="content_background">
+            <div class="content">
+                <div id="info">
+
+                    <div id="title_char">
+                        <p><b>Hanaka's Biography</b></p>
+                    </div>
+
+                <b>First name:</b> Hanaka <br/>
+                <b>Surname:</b> Nanada <br/>
+                <b>Age:</b> 16 years <br/>
+                <b>Birthday:</b> September 4th <br/>
+                <b>Gender:</b> Female <br/>
+                <b>Height:</b> 164cm <br/>
+                <b>Race:</b> Half Human / Half Striker Dragon <br/>
+                <b>Appearance:</b>
+                
+                <blockquote>
+                    <b>Eye color:</b> Blue <br/>
+                    <b>Hair color:</b> Pink <br/>
+                </blockquote>
+                
+
+                <br/>
+                
+                <b>Hometown:</b> Lawain <br/>
+                
+                <br/>
+
+                <b>Occupation:</b> Eureka For Progress High School (EFP High) and the police academy <br/>
+                <b>Affiliation:</b> EFP High school student / police academy student / hero <br/>
+                <b>Reputation:</b> White Angel of Lawain <br/>
+                
+                <br/>
+
+                <b>Status:</b> Alive <br/>
+                
+                <br/>
+
+                <b><u>Summary:</u></b><br/>
+                <div class="summary">
+                <blockquote>
+                    A young half dragon who’s passionate to becoming someone that helps the people, Nanada Hanaka originally aimed to become a police officer. While she still strives to become a police officer, a surprise gift on her 16th birthday changed her life and led her to live a life she really wanted to have: the life of a hero. Just not one she expected to live.
+                </blockquote> 
                 </div>
                 
-            </div>
-            
-            <div class="char-image">
-                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df99o5t-85e59813-f030-46a1-bbe9-0d2186d5c563.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5OW81dC04NWU1OTgxMy1mMDMwLTQ2YTEtYmJlOS0wZDIxODZkNWM1NjMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.LhxgZhNZHikDUPw9PEPV64gppko7xInQAYrExI0jCDQ"/>
-            </div>
-            
-        </div>
-        
-        <div class="backgroundcontent">
-        
-        <div class="content">
-        
-            <div class="titlebio">
-                
-                <div id="star">
-                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df9ebo0-c24b3df6-b277-4367-af6a-86efa75db055.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5ZWJvMC1jMjRiM2RmNi1iMjc3LTQzNjctYWY2YS04NmVmYTc1ZGIwNTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gkV6_-2Rmx5DouF7dTMcYC5vMsOYVJCV27X4VtjwN2M"/>
+                <div id="line_split"></div>
+
+                <div id="accordion_title">
+                <b>Backstory:</b>
                 </div>
-                
-                <b>Angelic Buster's BIO</b>
-                
-                <div id="star-reverse">
-                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dc8257b6-e89d-4e1f-b5c6-43014f303293/df9ebo0-c24b3df6-b277-4367-af6a-86efa75db055.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjODI1N2I2LWU4OWQtNGUxZi1iNWM2LTQzMDE0ZjMwMzI5M1wvZGY5ZWJvMC1jMjRiM2RmNi1iMjc3LTQzNjctYWY2YS04NmVmYTc1ZGIwNTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gkV6_-2Rmx5DouF7dTMcYC5vMsOYVJCV27X4VtjwN2M"/>
-                </div>
-                
-            </div>
-            <br/><br/>
-        
-        <div class="info" >
-        
-        
-            <b>Name:</b> Tear<br/>
-            
-            <b>Surname:</b> Unknown<br/>
-            
-            <b>Age:</b> 16-ish<br/>
-            
-            <b>Birthday:</b> August 1st<br/>
-            
-            <b>Gender:</b> Female<br/>
-            
-            <b>Race:</b> Nova<br/>
-            
-            <b>place of origin</b> Pantheon/Helliseum, Grandis<br/><br/>
-            
-            <b>occupation:</b> Idol, pirate<br/>
-            
-            <b>Affiliation:</b> unknown<br/>
-            
-            <b>Reputation:</b> Angelic Buster - Idol of the battlefield and hero of justice<br/><br/>
-            
-            <b><u>summary</u>:</b> <br/>
-            <blockquote>
-            The hero of justice and the idol of the battlefield, Angelic Buster uses the power she gained from the making the contract with the ancient dragon Eskalade to fight for what’s right.
-            </blockquote>
-            <br/><br/>
-            
-            <b><u>Backstory</u>:</b> <br/>
-            
-            <blockquote>
-                
-                
-                Tear, born without any tail or magic, She started off as an average powerless person who had lived a goot chunk of her life in Pantheon - the only place that wasn’t fully taken by the tyran Magus, having to endure disappointment from her peers and in some cases worse, with only a few of her friends actually being kind to her: Velderoth and Kyle. These three together were the self proclaimed Helliseum force, who dreamed to retake the homeland of Helliseum from the Magus’s rule.<br/><br/>
 
-Her life stayed mostly the same until one fateful day where her life changed when one of the priests under Magus’ rule attempted to rob an ancient relic that resided in the east of Pantheon. The priest’ attempt failed as Tear tried to stop them from taking the relic away, causing her to accidentally touch the relic. The next thing she realized she already defeated the priest while she was rocking a different appearance all together, from different haircolor with added twintails, to a different outfit and a different eye color all together.<br/><br/>
-
-In the infirmary she later was informed that the relic was permanently stuck to her right arm as a gauntlet. Attempts to take it off were made, until the voice of an ancient being was heard, an ancient dragon that resided in the relic known as Eskalade, who wished to sign a contract in return to give her the power of the relic. Reluctantly Tear agrees to it.<br/><br/>
-
-Thus, the superhero known as Angelic Buster was born, a hero who’s goal is to defeat Magus and liberate Helliseum from his tyrannical rule.
                 
-                
-            </blockquote>
-            <br/>
-            
-            <b><u>Powers</u>:</b> <br/>
-            <blockquote>
-                Normally she doesn’t have any powers as Tear, but being contracted by the ancient dragon Eskalade, Tear can transform into her superhero persona Angelic Buster.
-
-As the Angelic Buster, she uses her voice and her right gauntlet known as the soul shooter to shoot magic projectiles at her opponent, among being able to do other things, such as creating magic constructs and weapons, such as a gigantic hammer, star blades
-            </blockquote>
-            <br/>
-            
-            <b><u>Verses</u>:</b> <br/>
-            
-                
-                
-                <div class="accordion_location">
+                <div class="accordion">
                     <!--Each div = 1 accordion-->
                     <div>
-                        <input type="checkbox" name="verses_accordion" id="verse0" class="accordion__input">
-                        <label for="verse0" title="lawain" class="accordion__label">
-                            <div id="backdrop">
-                                <b><i>Main verse</i></b>
-                            </div>
-                        </label>
+                        <input type="checkbox" name="backstory_accordion" id="backstory" class="accordion__input">
+                        <label for="backstory" class="accordion__label"><b>Expand</b></label>
                         <div class="accordion__content">
-                            <blockquote>
-                                <p>
-                                Read the backstory for more info
-                                </p>
-                            </blockquote>
-                        </div>
-                    </div>
-                    
-                    
-                    <div>
-                        <input type="checkbox" name="verses_accordion" id="verse1" class="accordion__input">
-                        <label for="verse1" title="lawain" class="accordion__label">
-                            <div id="backdrop">
-                                <b><i>Verse 2</i></b>
+                            <div class="accordion">
+                                <!--Each div = 1 accordion-->
+                                <div>
+                                    <input type="checkbox" name="backstory_accordion" id="prequal" class="accordion__input">
+                                    <label for="prequal" class="accordion__label"><b>Prequal | Growing wing</b></label>
+                                    <div class="accordion__content">
+                                        <blockquote>
+                                        Living the life of a hero was a dream that a lot of young children have and wish to become, but as they get older, they start to either stop wishing to be one or they try and pursue jobs that can be considered heroic work for some people, like doctors, firefighters, or a police officer.
+                                        <br/><br/>
+                                        As for the daughter of the police officer Hikari Naona, for Nanada Hanaka that meant following her mother’s footsteps to becoming a police officer. Though the road to becoming a police officer can often be a long one, the drive she has is still present which lead her to pass middle school and enroll herself into EUREKA high school.
+                                        <br/><br/>
+                                        But even in her time as a student she was helping the people out, although with less eventful things such as chores or stuff. Giving people a helping hand and her charisma had gained her a reputation within the people of Lawain. But even with all that, even when she’s nearing the age of 16 there was one thing that kept her going: a dream of her wanting to Become a hero due to the heroes of Lawain, even if little is known about the heroes themselves.
+                                        <br/><br/>
+                                        Due to her admiration towards the heroes of her city, she strived to look for ways to become a hero or someway like it. She had some help from her best friend Akari. A little bit of aura training here and there, even getting some gear for her that helped her out such as the boots she wears on a day to day basis. She had been training, but never came that far. Even with that, she enjoyed what she did with Akari, even talking with her about the topic of heroes.
+                                        <br/><br/>
+                                        That was sort of her daily life. That was until her life took a turn at the age of 16.
+                                        </blockquote>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" name="backstory_accordion" id="chapter1" class="accordion__input">
+                                    <label for="chapter1" class="accordion__label"><b>The dream?</b></label>
+                                    <div class="accordion__content">
+                                        <blockquote>
+                                        Another day gone by, another day older. It was the day before her birthday which was also her first day attending at EUREKA high school. Her day went about as smooth as she would hoped for. Making new friends and what not, with her and Akari attending the same classes. Nothing much happened as it was just a getting to know the teachers and each other as well as a tour around the school building, getting the books before being able to head back home and once they were done for today, Akari and Hanaka enjoyed the day like they always do, until they decided to go back to their homes once the sun sets. It was a normal day like any other even back home. She checked her phone and the TV for any news regarding heroes, chatting with Akari and other friends on the phone and or PC, eating food and what not until it was time to head to bed for the night.
+                                        <br/><br/>
+                                        Once the clock reached 12:00 AM / 00:00 in the morning when Hanaka was soundly asleep, she started to have what seemed like a lucid dream. In that Lucid dream, she was inside what seemed like a white void, with some sparks of electricity that seemed to be far away. in front of her she noticed a what seemed like a humanoid being that almost took on her appearance in shape, but the colors where all white and or light-ish grey, with what seemed to be blue markings and lines along the other’s body. The only color that stayed the same were the blue eyes. As Hanaka wanted to ask who the other is and if she is dreaming. Immediately without any delay the other responded that she wasn’t dreaming and that they’re currently in a device able to help her out with her future endeavor, whilst calling her by the title of master. With Hanaka being confused as to what’s going on and weirded out by what the other called her, they explained the situation.
+                                        <br/><br/>
+                                        The stranger explained that they’re an entity programmed to help the user of the device, with Hanaka being the user they have been programmed to help in her journey of becoming a hero. Upon being asked by Hanaka if her mother or Akari made it, they shook her head, explaining that they did not create them, nor can they disclose that information yet other than they’re created by some people who were close to her. Unsure of all of that, Hanaka asked if she has a say in it and if there’s things needed of her. The entity nodded, stating that it’s her decision if she wants to accept it or not as well as if there’s anything needed of them in return. 
+                                        <br/><br/>
+                                        Uncertain of more things, Hanaka asked what she can expect if she accepts the help, in which the entity responded that the device will be linked to her using her aura and aura channels that resides in her body alongside the fact that they’ll help her out learning to harness her powers until she mastered it and that they’ll aid her in the energy output and such things if need be. The only thing they requested of her outside of accepting the help is to keep it between the two of them for the time being for the powers she may wield can be potentially dangerous if in the wrong hands.
+                                        <br/><br/>
+                                        While risking her career may be something she didn’t want and she just met the entity, her dream of being a hero may come true if she accepted it.
+                                        <br/><br/>
+                                        In the end, Hanaka reluctantly agreed to the request, but asked if they had a name. They responded that they weren’t given a name yet, but would accept the name if she wished to do so. After a couple of seconds of thinking, Hanaka decided to give the entity the name “Chokey”, pronounced as “cho-gee”. The entity agreed to that. With the entity having gotten the name Chokey, Hanaka asked if that if she can end the deal if she changes her mind at some point, in which Chokey nodded, telling her that she’s their master and that they’ll keep every request in mind. With that, she asked one last question: how she can get out of this space they’re in. Chokey responded that they can do it for her for now, before they asked if she has any questions. After a second of thinking, Hanaka nodded, asking if they can bring her back. With a nod, they did just that.
+                                        <br/><br/>
+                                        The next thing Hanaka knows, she was back in bed, it was early in the morning while the alarm went off. But on her lap was what seemed to be a simple looking collar with a crystal like marble connected to it. Upon laying hands on it, she somewhat had the feeling that that was the device Chokey was talking about. Confused on why it’s a collar, Hanaka decided to that it’s best not to question it for not. This day is her birthday after all, so she should enjoy it. So with that, she decided to bring the Collar with her.
+                                        </blockquote>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" name="backstory_accordion" id="chapter2" class="accordion__input">
+                                    <label for="chapter2" class="accordion__label"><b>Ascended</b></label>
+                                    <div class="accordion__content">
+                                        <blockquote>
+                                        <b>W.I.P</b>
+                                        </blockquote>
+                                    </div>
+                                </div>
                             </div>
-                        </label>
-                        <div class="accordion__content">
-                            <blockquote>
-                                <p>
-                                <b>W.I.P</b>
-                                </p>
-                            </blockquote>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <input type="checkbox" name="verses_accordion" id="verse2" class="accordion__input">
-                        <label for="verse2" title="lawain" class="accordion__label">
-                            <div id="backdrop">
-                                <b><i>Verse 3</i></b>
-                            </div>
-                        </label>
-                        <div class="accordion__content">
-                            <blockquote>
-                                <p>
-                                <b>W.I.P</b>
-                                </p>
-                            </blockquote>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <input type="checkbox" name="verses_accordion" id="verse3" class="accordion__input">
-                        <label for="verse3" title="lawain" class="accordion__label">
-                            <div id="backdrop">
-                                <b><i>Hello new me! | Corrupt verse </i></b>
-                            </div>
-                        </label>
-                        <div class="accordion__content">
-                            <blockquote>
-                                <p>
-                                Tear has lived her life as a cursed child for years, shunned by her peers, with only a few exceptions like Kyle and Velderoth accepting her and become her friend. While her friends were one reason why she didn't give up living, god does the desire to end it or start a double life stay ever so high and it did not diminish.
-<br/><br/>
-The story follows mostly how it usually goes, with the real change starting at the infirmary, where Tear just flat out accepted the contract without any hesitation, not thinking about the potential side effects of being contracted to become a magical girl.<br/>
-She was genuinely enjoying the magical girl life and even enjoying the new found fame using her new found singing voice to become an idol like Eskalade wanted. However, what will happen to her in the coming months, years even will forever change her life.
-<br/><br/>
-With each time she's using the relic to become Angelic Buster, the relic started to affect her normal self, causing her to gradually become more like her Angelic Buster persona, both in terms of appearance and in terms of personality irreversibly to increase how effective she is with the relic.
-<br/><br/>
-The moment her friends started to notice the changes, with concern of her wellbeing in mind, they asked if she feels different from what she used to be.
-<br/><br/>
-"Me? Being...Different then before? I look like this all the time, right so what’s the issue?"
-<br/><br/>
-The worst thing started to happen to her. What she remembers from her past self slowly has started to dwindle from her mind as well, like such thoughts never were there to begin with, or so it appears. She kept using her new found powers, unknowingly losing more and more what made her the Tear they once knew. The two started to be more distant from her the more her normal form started to resemble Angelic Buster.
-<br/><br/>
-A year or two passed once more, the girl Tear, who they were friends with had only a few things left of her past self. Memories of how she looked like before she even became Angelic Buster? Gone. How she got her powers that made her become Angelic Buster? changed to make her think she had such power from the very begining. All that she had of her past were only memories of her friends and her name as her only memories of when she was Tear. Though by then the two boys didn't talk to her ever again.
-<br/><br/>
-Day by day, Tear was wondering once where they both are, in a way concerned about her bonds she has-- or had with them, but she couldn't find them. With her not being able to find them anymore, she was in a way alone, with the only company being Eskalade, the one who has contracted her in the first place. So once she realized that she can't find them anymore one thought came to mind.
-<br/><br/>
+                        </div>                
+                    </div>    
 
-"They're...Not interested in seeing me again, are they..?" <br/><br/>
-Looking at her soul shooter, she started to get massive headaches from trying to think what has caused them to leave her. However, all memories except of her knowing that they're her friends are all but either gone or foggy, leaving her with headaches every time she's trying to consciously remember them.
-<br/><br/>
-If it was Tear, she would be very sad to even wanting to never do anything with her angelic buster persona and try and find ways to fix this issue. However, the person who's looking at her soul shooter no longer was the same Tear that they knew and care so much for. This person was Tear - The Angelic Buster and she was annoyed that they left her. With her being annoyed that they've left her, she's was thinking.
+            </div>
+                <br/>
 
-<br/><br/>
-"...If they want to forget about me, then fine-- I'll forget about them too! Esky, let's leave that memory behind us and forget about them! Just forget every moment I have with them!! Hell, if they miss Tear so much, I’ll forget my own name too!!!"
-<br/><br/>
-
-She aimed her soul shooter to the sky, using every memory of them as fuel for this one big star bubble. Once it was shot in the air and burst like fireworks above the clouds, a sigh escaped from her, before the new Tear-- no, the new person who called herself Angelic Buster started to smile as those memories were removed from her entirely.
-
-<br/><br/>
-"It is done.. Welcome, new me!"
-                                </p>
-                            </blockquote>
-                        </div>
-                    </div>
-                    
-                    
+                <div id="accordion_title">
+                <b>Powers:</b>
                 </div>
                 
-            
-            
+                        <div class="accordion">
+                            <!--Each div = 1 accordion-->
+                            <div>
+                                <input type="checkbox" name="power_accordion" id="power" class="accordion__input">
+                                <label for="power" class="accordion__label"><b>Expand</b></label>
+                                <div class="accordion__content" id="power">
+
+                                    <b>Normal form</b>:
+                                    <blockquote>
+                                        <b>Super strength -</b>
+                                        <blockquote>
+                                            With her being a striker dragon, Hanaka is capable of lifting object many of times heavier then herself. For pulling or pushing an object, the heaviest she can push/pull is a loaded truck.
+                                            <br/>
+                                            With her in overdrive, her limits of things like pushing and pulling have been raised to being able to push a fully loaded jumbo airplane.
+                                        </blockquote>
+                                        <br/>
+                                        <b>aura manipulation (general) -</b>
+                                        <blockquote>
+                                            Hanaka like most of the other people of Lawain has the ability to use aura manipulation. Depending on the user and their mindset, their aura can change into different kinds of forms with different use cases. In Hanaka’s case it’s General. 
+                                            <br?>
+                                            Her aura is able to be used as energy to fuel items made for her that can be activated by her aura.
+                                        </blockquote>
+
+                                    </blockquote>
+                                    <br/><br/>
+                                    <b>White Angel</b>:
+                                    <blockquote>
+                                        <b>Aura Manipulation (energy) -</b>
+                                        <blockquote>
+                                            With her equipping the collar and transforming into the White Angel, she’s got the ability to create energy based attacks, defenses and other various of things she is capable of doing.
+                                        </blockquote>
+                                        <br/>
+                                        <b>Energy Wings -</b>
+                                        <blockquote>
+                                            She’s capable of creating energy wings that allows her to fly. These wings can also change as boosters to allow her to go at over the speed of sound. In overdrive she’s able to go at lightning speed, making herself look like a flash of light whizzing through the skies. These energy wings are also capable as arms to pick up items or use to blast energy beams.
+                                        </blockquote>
+                                        <br/>
+                                        <b>Energy Shields -</b>
+                                        <blockquote>
+                                            Upon transformation, she can immediately call upon an energy shield capable of blocking attacks. With each attack of an enemy taken by the shield will result in zero damage to the user of the energy shield. However, it does leave cracks in the shield, which can recover in as little as 10 seconds. These shields also are capable of increasing the radius if the user wishes to be. The maximum radius is about 5 meters.
+                                            <br/>
+                                            Anyone inside of the shield will not feel any change in gforce if the user makes a sudden turn. The shield is also capable of changing shape if one wishes to minimize wind drag.
+                                        </blockquote>
+                                        <br/>
+                                        <b>energy handcuffs/ropes/rings -</b>
+                                        <blockquote>
+                                            all of these serve the same purpose: to catch the opponent and bind them to these items. The breaking point of these depends of the power the user is pouring. when the user is giving all of their power, it will be invincible. The user can release their opponents from these energy items at will.
+                                        </blockquote>
+                                        <br/>
+                                        <b>energy beams and spheres -</b>
+                                        <blockquote>
+                                            and lastly, energy beams/lasers and energy spheres/balls. these energy beams and spheres are released from the palms of her hands, or each of her fingertips or even her energy wings. The energy sphere’s can also be used as energy bombs. The strongest she is capable of creating is a laser blats with the diameter of 5 meters.
+                                            <br/>
+                                            Her shoes are also made to battle as those are made with blades on the side to cut through stuff.
+                                        </blockquote>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                
+                <div id="accordion_title">
+                <b>Relationships:</b>
+                </div>
+
+                
+                <div class="accordion">
+                    <!--Each div = 1 accordion-->
+                    <div>
+                        <input type="checkbox" name="relation_accordion" id="relation" class="accordion__input">
+                        <label for="relation" class="accordion__label"><b>Expand</b></label>
+                        <div class="accordion__content">
+
+
+                            <!--Relation start-->
+                            <div class="relation">
+                                
+                                <a href="https://lawain-dimensional-heroes.tumblr.com/naona">
+                                    <img src="https://static.tumblr.com/3b3b018bb3d85b5a08cb050b112c2251/l5mrphi/RdUpxobka/tumblr_static_eivrkxfh6k0s0s8oswg00ssws.png"/>
+                                </a>
+                            
+                            <div id="relationinfo">
+                                <div id="relationtop">
+                                    <div>Hikari Naona</div>
+                                
+                                    <div>from <a href="https://lawain-dimensional-heroes.tumblr.com/">lawain-dimensional-heroes</a></div>
+                                    </div>
+                                    
+                                    
+                                    <div id="relationline"></div>
+                                    relation status: Mother and Daughter
+                                </div>
+                            </div>
+                            <!--Relation end-->
+
+                            <!--Relation start-->
+                            <div class="relation">
+                                
+                                <a href="https://lawain-dimensional-heroes.tumblr.com/">
+                                    <img src="https://64.media.tumblr.com/d3b30463ca525d9445451a687b024601/tumblr_inline_re35s08F8S1vcwp48_500.png"/>
+                                </a>
+                            
+                            <div id="relationinfo">
+                                <div id="relationtop">
+                                    <div>Nanada Zephyr</div>
+                                
+                                    <div>from <a href="https://lawain-dimensional-heroes.tumblr.com/">lawain-dimensional-heroes</a></div>
+                                    </div>
+                                    
+                                    
+                                    <div id="relationline"></div>
+                                    relation status: Father and Daughter
+                                </div>
+                            </div>
+                            <!--Relation end-->
+
+                            <!--Relation start-->
+                                <div class="relation">
+                                
+                                    <a href="https://lawain-dimensional-heroes.tumblr.com/maroon">
+                                        <img src="https://64.media.tumblr.com/82ab8500a58c4cc16c8e79d9246307ed/bdd359c403d0228d-41/s2048x3072/70c36f04c95b0021497e305ecdc996fc4eba4220.png"/>
+                                    </a>
+                                
+                                <div id="relationinfo">
+                                    <div id="relationtop">
+                                        <div>Nanada Maroon</div>
+                                    
+                                        <div>from <a href="https://lawain-dimensional-heroes.tumblr.com/">lawain-dimensional-heroes</a></div>
+                                    </div>
+                                    
+                                    
+                                    <div id="relationline"></div>
+                                    relation status: siblings
+                                </div>
+                            </div>
+                            <!--Relation end-->
+                            
+                            <!--Relation start-->
+                            <div class="relation">
+                                
+                                <a href="https://lawain-dimensional-heroes.tumblr.com/elyia">
+                                    <img src="https://64.media.tumblr.com/ffc71d03752a0624d2e7820a83cd7d60/tumblr_inline_re1l79kZCp1vcwp48_500.png"/>
+                                </a>
+                            
+                            <div id="relationinfo">
+                                <div id="relationtop">
+                                    <div>Elyia Kelvanur</div>
+                                
+                                    <div>from <a href="https://lawain-dimensional-heroes.tumblr.com/">lawain-dimensional-heroes</a></div>
+                                    </div>
+                                    
+                                    
+                                    <div id="relationline"></div>
+                                    relation status: half-Siblings
+                                </div>
+                            </div>
+                            <!--Relation end-->
+
+                            <!--Relation start-->
+                            <div class="relation">
+                                
+                                <a href="https://lawain-dimensional-heroes.tumblr.com/akari">
+                                    <img src="https://static.tumblr.com/5857965fa709add0a7d5c0b251e83f6c/l5mrphi/oB0ppdz7j/tumblr_static_bj7udr67j3ks0scwo8swog0oc.png"/>
+                                </a>
+                            
+                            <div id="relationinfo">
+                                <div id="relationtop">
+                                    <div>Hikari Akari</div>
+                                
+                                    <div>from <a href="https://lawain-dimensional-heroes.tumblr.com/">lawain-dimensional-heroes</a></div>
+                                    </div>
+                                    
+                                    
+                                    <div id="relationline"></div>
+                                    relation status: childhood friends
+                                </div>
+                            </div>
+                            <!--Relation end-->
+                        
+                            <!--Relation start-->
+                            <div class="relation">
+                                
+                                <a href="https://lawain-dimensional-heroes.tumblr.com/tsukine">
+                                    <img src="https://64.media.tumblr.com/0047fc10a31191af0244c35ba2432a43/bdd359c403d0228d-77/s2048x3072/921e456f4bc7b6bad25a5a03979355914105c234.png"/>
+                                </a>
+                            
+                            <div id="relationinfo">
+                                <div id="relationtop">
+                                    <div>Johou Tsukine</div>
+                                
+                                    <div>from <a href="https://lawain-dimensional-heroes.tumblr.com/">lawain-dimensional-heroes</a></div>
+                                    </div>
+                                    
+                                    
+                                    <div id="relationline"></div>
+                                    relation status: friends
+                                </div>
+                            </div>
+                            <!--Relation end-->
+                            
+    <!--Relation start-->
+                        <div class="relation">
+                                
+                            <a href="https://lawain-dimensional-heroes.tumblr.com/qi">
+                                <img src="https://64.media.tumblr.com/967c18588554fd51cd0d8b4669432323/tumblr_inline_re50z16dFV1vcwp48_500.png"/>
+                            </a>
+                        
+                        <div id="relationinfo">
+                            <div id="relationtop">
+                                <div>Qi Jögi</div>
+                            
+                                <div>from <a href="https://lawain-dimensional-heroes.tumblr.com/">lawain-dimensional-heroes</a></div>
+                            </div>
+                            
+                            
+                            <div id="relationline"></div>
+                            relation status: Friends
+                        </div>
+                    </div>
+                    <!--Relation end-->
+                            
+                            <!--Relation start-->
+                            <div class="relation">
+                                
+                                <a href="https://lawain-dimensional-heroes.tumblr.com/miku">
+                                    <img src="https://64.media.tumblr.com/71aa932d0bbbd5927f02a1eb2e8fa9d2/tumblr_inline_re4ux2F9w71vcwp48_500.png"/>
+                                </a>
+                            
+                            <div id="relationinfo">
+                                <div id="relationtop">
+                                    <div>Hatsune Miku</div>
+                                
+                                    <div>from <a href="https://lawain-dimensional-heroes.tumblr.com/">lawain-dimensional-heroes</a></div>
+                                    </div>
+                                    
+                                    
+                                    <div id="relationline"></div>
+                                    relation status: friends
+                                </div>
+                            </div>
+                            <!--Relation end-->
+
+                            <!--Relation start-->
+                            <div class="relation">
+                                
+                                <a href="https://lawain-dimensional-heroes.tumblr.com/hibiki">
+                                    <img src="https://64.media.tumblr.com/600002494ae4fb5e6da158e99968b70c/bdd359c403d0228d-be/s2048x3072/495ebdc627a252926c87172990d7311c015899c8.png"/>
+                                </a>
+                            
+                            <div id="relationinfo">
+                                <div id="relationtop">
+                                    <div>Tachibana Hibiki</div>
+                                
+                                    <div>from <a href="https://lawain-dimensional-heroes.tumblr.com/">lawain-dimensional-heroes</a></div>
+                                    </div>
+                                    
+                                    
+                                    <div id="relationline"></div>
+                                    relation status: Senpai and Kouhai
+                                </div>
+                            </div>
+                            <!--Relation end-->
+
+    <!--Relation start-->
+                            <div class="relation">
+                            
+                                <a href="https://lawain-dimensional-heroes.tumblr.com/kiana">
+                                    <img src="https://64.media.tumblr.com/8f17d086e40c0ae528725b391238bd20/tumblr_inline_re4x1i8WZF1vcwp48_500.png"/>
+                                </a>
+                            
+                            <div id="relationinfo">
+                                <div id="relationtop">
+                                    <div>Kiana Kaslana</div>
+                                
+                                    <div>from <a href="https://lawain-dimensional-heroes.tumblr.com/">lawain-dimensional-heroes</a></div>
+                                </div>
+                                
+                                
+                                <div id="relationline"></div>
+                                relation status: Comrades
+                            </div>
+                        </div>
+                        <!--Relation end-->
+
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                        <div id="accordion_title">
+                        <b><u>Timelines and Verses</u>:</b>
+                        </div>
+                        
+
+                        <div class="accordion">
+                            <!--Each div = 1 accordion-->
+                            <div>
+                                <input type="checkbox" name="backstory_accordion" id="verses" class="accordion__input">
+                                <label for="verses" class="accordion__label"><b>Expand</b></label>
+                                <div class="accordion__content">
+                            
+                                    <b>Timelines:</b> 
+                                    <div id="line_split"></div>
+                                    
+                                    <div class="accordion">
+                                        <!--Each div = 1 accordion-->
+                                        <div>
+                                            <input type="checkbox" name="verses_accordion" id="timeline0" class="accordion__input">
+                                            <label for="timeline0" class="accordion__label"><b>Main Timeline</b></label>
+                                            <div class="accordion__content">
+
+                                                Check the summary and backstory page for more info.
+
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <input type="checkbox" name="verses_accordion" id="timeline1" class="accordion__input">
+                                            <label for="timeline1" class="accordion__label"><b>Devil Timeline</b></label>
+                                            <div class="accordion__content">
+
+                                                This timeline dives into her becoming Lucifer’s successor. 
+                                                <br/>
+                                                Hanaka confiscated a crystal known as a Hades Crystal which was rumored to host Lucifer himself in.
+                                                <br/><br/>
+                                                She confiscated it to try and gain more power to take on the dangers that lately have been roaming around the planet, with the radiance of the crystal tempting her even more to take it. 
+                                                <br/>
+                                                A contract was formed that originally benefitted mostly Lucifer himself, but it changed shortly after he realized how hard she is for him to control her when she has a goal in mind, thus changing the contract to make her his next successor. <br/><br/>
+                                                This story takes place a while after her first time becoming a hero, but at a time before she was reunited with her brother
+
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <input type="checkbox" name="verses_accordion" id="timeline2" class="accordion__input">
+                                            <label for="timeline2" class="accordion__label"><b>Mechaqueen Timeline</b></label>
+                                            <div class="accordion__content">
+
+                                                The city of Lawain has been overrun by mechabeings from the newly formed mecha-empire-- an empire that the mechaqueen Jinki Jögi rules over.
+                                                <br/><br/>
+                                                She and the rest of the heroes try to find a way to liberate their homes from the empire, but along the journey they would stumble across one friendly mechabeing that may be crucial to make their mission a success.<br/>
+                                                <br/>
+                                                This story takes place after the reunion with her brother.
+
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <input type="checkbox" name="verses_accordion" id="timeline3" class="accordion__input">
+                                            <label for="timeline3" class="accordion__label"><b>Vigilante timeline</b></label>
+                                            <div class="accordion__content">
+
+                                                This story takes place outside of the main verse’s timeline, where she hasn’t made a contract with Chokey-- n’or did Chokey ever get made.
+                                                <br/><br/>
+                                                This timeline is about how Hanaka’s daily life as a vigilante, a kind of hero who would skirt the laws here and there more often than most heroes. Like her mother when she was her age, Hanaka would be a tiny bit of a rebel yet has a big heart for the people. 
+                                                <br/><br/>
+                                                Though she may soon find out that being a vigilante may be more trouble than it’s worth.
+
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <input type="checkbox" name="verses_accordion" id="timeline4" class="accordion__input">
+                                            <label for="timeline4" class="accordion__label"><b>reunion timeline</b></label>
+                                            <div class="accordion__content">
+
+                                                [insert content here]
+
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                            
+                            <br/>
+                            
+                            
+                                    <b>Verses:</b> 
+                                    <div id="line_split"></div>
+                                    
+                                    <div class="accordion">
+                                        <!--Each div = 1 accordion-->
+                                        <div>
+                                            <input type="checkbox" name="verses_accordion" id="verse0" class="accordion__input">
+                                            <label for="verse0" class="accordion__label"><b>Main verse</b></label>
+                                            <div class="accordion__content">
+
+                                                Check the summary and backstory page for more info.
+
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <input type="checkbox" name="verses_accordion" id="verse1" class="accordion__input">
+                                            <label for="verse1" class="accordion__label"><b>Dragon Ball Z verse</b></label>
+                                            <div class="accordion__content">
+
+                                                In this verse Hanaka is a Saiyan who goes by the name Hareca, who has a older brother Meron who was weaker than her due to a mutation in his genes that made him appear as a super saiyan without any benefits of one. 
+                                                <br/>
+                                                Regardless she still helps him train regardless of his mutation.
+
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <input type="checkbox" name="verses_accordion" id="verse2" class="accordion__input">
+                                            <label for="verse2" class="accordion__label"><b>Maplestory verse </b></label>
+                                            <div class="accordion__content">
+
+                                                One of the Novae from Grandis who was born after the kingdom of Helliseum being overtaken by the traitor Magus, Hanaka tries to survive with Maroon and the rest of the family in Pantheon, with Maroon being a wandering potion seller to get some food, drinks and cash for the family while Hanaka’s story is trying to find a means to give her a way to support her family too in terms of income.
+
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="checkbox" name="verses_accordion" id="verse3" class="accordion__input">
+                                            <label for="verse3" class="accordion__label"><b>Million Arthur verse</b></label>
+                                            <div class="accordion__content">
+
+                                                Living in a farm was the ordinary life for Hanaka and Maroon. It wasn’t the most grand life they had at but they weren’t complaining about it. For Hanaka she was fine living that life all day everyday. 
+                                                <br/><br/>
+                                                However the two sibling’s lives would took a crazy turn when her brother became one of the million Arthurs after pulling an Excalibur, which lead him from a humble hardworking farmer into the equivalent of a king of Britain, with Hanaka becoming a princess due to that. The life of a princess was a glorious one yet one she had to get used to for a long time. 
+                                                <br/><br/>
+                                                Yet even for a princess life things weren’t going to be dull.
+
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <input type="checkbox" name="verses_accordion" id="verse4" class="accordion__input">
+                                            <label for="verse4" class="accordion__label"><b>Genshin Impact verse</b></label>
+                                            <div class="accordion__content">
+
+                                                Born from an Inazuman family in Mondstadt, Hanaka’s lives the life as a knight of Favonius as an outrider. She wields the Anemo element and a polearm. She also has a big brother who was adopted by her mother and father after finding him abandoned as a baby.
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     </body>
+    <script>
+        const tabs = document.querySelector(".flexbox_appearance_buttons");
+        const tabButton = document.querySelectorAll(".tab__input");
+        const contents = document.querySelectorAll(".tab_char");
 
+        tabs.onclick = e => {
+        const id = e.target.dataset.id;
+        if (id) {
+            tabButton.forEach(btn => {
+            btn.classList.remove("active");
+            });
+            e.target.classList.add("active");
+
+            contents.forEach(content => {
+            content.classList.remove("active");
+            });
+            const element = document.getElementById(id);
+            element.classList.add("active");
+        }
+        }
+    </script>
 </html>
